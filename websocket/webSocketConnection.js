@@ -140,25 +140,6 @@ class WebSocketConnection {
     this.send({ op: Constants.OPCodes.IDENTIFY, d });
   }
 
-  // identifyResume() {
-  //   if (!this.sessionID) {
-  //     this.debug('Warning: wanted to resume but session ID not available; identifying as a new session instead');
-  //     return this.identifyNew();
-  //   }
-  //   this.debug(`Attempting to resume session ${this.sessionID}`);
-
-  //   const d = {
-  //     token: this.client.token,
-  //     session_id: this.sessionID,
-  //     seq: this.sequence,
-  //   };
-
-  //   return this.send({
-  //     op: Constants.OPCodes.RESUME,
-  //     d,
-  //   });
-  // }
-
 }
 
 WebSocketConnection.WebSocket = WebSocket;
